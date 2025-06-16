@@ -1,0 +1,469 @@
+.header-mixins-small () {
+    .header {
+        display: flex;
+        flex-direction: column;
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+            margin: 0px 20px 0px 0px;
+
+            .header-img {
+                width: 310px;
+                height: 150px;
+                object-fit: cover;
+            }
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                color: rgb(43, 67, 97);
+                font-size: 40px;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            p {
+                font-size: 15px;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .contact-info {
+                border-top: 2px solid rgb(43, 67, 97);
+                margin-top: -10px;
+                padding-top: 10px;
+                
+            }
+        }
+    }
+
+    .personal-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px;
+        /* top right bottom left */
+        background: rgb(227, 232, 238);
+        padding: 20px;
+        text-align: justify;
+
+        h3 {
+            display: flex;
+            justify-content: center;
+            color: rgb(85, 85, 85);
+            font-size: 1.3em;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1em;
+        }
+    }
+}
+
+.projects-mixins-small () {
+    .tech-projects {
+        display: flex;
+        margin: 20px;
+        flex-direction: column;
+        gap: 20px;
+
+        .tech-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 10px;
+
+            h3 {
+                display: flex;
+                justify-content: center;
+                color: rgb(85, 85, 85);
+                font-size: 1.4em;
+            }
+
+            .tech-stack-images {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                padding-left: 10px;
+                justify-content: center;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
+        .my-projects {
+            display: flex;
+            flex-direction: column;
+            background: rgb(227, 232, 238);
+            border: 1px solid red;
+            // margin-left: 0;
+            width: 90%;
+
+
+            h3 {
+                display: flex;
+                justify-content: center;
+                color: rgb(85, 85, 85);
+                font-size: 1.2em;
+            }
+
+            .proj-title {
+                text-align: justify;
+                margin-top: 20px;
+                font-weight: 600;
+            }
+
+            .proj-desc {
+                font-size: 1em;
+            }
+
+            .tech-used {
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+.footer-mixins-small () {
+    .footer {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 25px;
+
+        .socials {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            text-decoration: underline;
+
+            p {
+                font-weight: lighter;
+                font-size: 1em;
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+.header-mixins-medium () {
+    .header {
+        margin: 20px 10px 10px 0px;
+        display: flex;
+        width: auto;
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+            margin: 0px 0px 0px 20px;
+
+            .header-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 80% center;
+            }
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 30px;  
+
+            h1 {
+                color: rgb(43, 67, 97);
+                font-size: 45px;
+            }
+
+            p {
+                font-size: 17px;
+                margin-top: 8px;
+            }
+
+            .line {
+                margin-top: 30px;
+                border-bottom: 2px solid rgb(43, 67, 97);
+                max-width: 400px;
+            }
+        }
+    }
+
+    .personal-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px;
+        /* top right bottom left */
+        background: rgb(227, 232, 238);
+        padding: 20px;
+        text-align: justify;
+
+        h3 {
+            display: flex;
+            justify-content: center;
+            color: rgb(85, 85, 85);
+            font-size: 1.4em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+    }
+}
+
+.projects-mixins-medium () {
+    .tech-projects {
+        display: flex;
+        margin: 20px;
+
+        .tech-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 10px;
+
+            h3 {
+                display: flex;
+                justify-content: center;
+                color: rgb(85, 85, 85);
+                font-size: 1.2em;
+            }
+
+            .tech-stack-images {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                padding-left: 10px;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+
+        .my-projects {
+            display: flex;
+            flex-direction: column;
+            background: rgb(227, 232, 238);
+            padding: 10px 20px 20px 20px;
+
+            h3 {
+                display: flex;
+                justify-content: center;
+                color: rgb(85, 85, 85);
+                font-size: 1.2em;
+            }
+
+            .proj-title {
+                text-align: justify;
+                margin-top: 20px;
+                font-weight: 600;
+            }
+
+            .proj-desc {
+                font-size: 1em;
+            }
+
+            .tech-used {
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+.footer-mixins-medium () {
+    .footer {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 25px;
+
+        .socials {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            text-decoration: underline;
+
+            p {
+                font-weight: lighter;
+                font-size: 1.2em;
+            }
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+.header-mixins-large () {
+    .header {
+        margin: 20px 10px 10px 0px;
+        display: flex;
+        width: auto;
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+            margin: 0px 20px 0px 0px;
+
+            .header-img {
+                width: 310px;
+                height: 300px;
+                object-fit: cover;
+                object-position: 80% center;
+            }
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1 {
+                color: rgb(43, 67, 97);
+                font-size: 60px;
+            }
+
+            p {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+            .line {
+                margin-top: 30px;
+                border-bottom: 2px solid rgb(43, 67, 97);
+                max-width: 600px;
+            }
+        }
+    }
+
+    .personal-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px;
+        /* top right bottom left */
+        background: rgb(227, 232, 238);
+        padding: 20px;
+        text-align: justify;
+
+        h3 {
+            display: flex;
+            justify-content: center;
+            color: rgb(85, 85, 85);
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1.3em;
+        }
+    }
+}
+
+.projects-mixins-large () {
+    .tech-projects {
+        display: flex;
+        margin: 20px;
+
+        .tech-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 10px;
+
+            h3 {
+                display: flex;
+                justify-content: center;
+                color: rgb(85, 85, 85);
+                font-size: 1.4em;
+            }
+
+            .tech-stack-images {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                padding-left: 10px;
+
+                img {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+
+        .my-projects {
+            display: flex;
+            flex-direction: column;
+            background: rgb(227, 232, 238);
+            padding: 10px 20px 20px 20px;
+
+            h3 {
+                display: flex;
+                justify-content: center;
+                color: rgb(85, 85, 85);
+                font-size: 1.4em;
+            }
+
+            .proj-title {
+                text-align: justify;
+                margin-top: 20px;
+                font-weight: 600;
+            }
+
+            .proj-desc {
+                font-size: 1.1em;
+            }
+
+            .tech-used {
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
+.footer-mixins-large () {
+    .footer {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 25px;
+
+        .socials {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            text-decoration: underline;
+
+            p {
+                font-weight: lighter;
+                font-size: 1.2em;
+            }
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+
+

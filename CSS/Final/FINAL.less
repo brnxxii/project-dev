@@ -1,0 +1,109 @@
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-style: inherit;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	}
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: bold; /* Restores default boldness */
+    }
+
+body{
+    background-color: rgb(61, 53, 39);
+    background-image: url("/CSS/caniuse-bg-dark.png");
+}
+
+@import (less) "final-variables.less";
+@import (less) "final-mixins.less";
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    .nav-bar-left ul{
+        .nav-list();
+        margin-left: 60px;
+    }
+    .nav-bar-right ul{
+        .nav-list();
+        margin-right: 60px;
+    }
+}
+
+.header-content {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 35px 60px 30px 60px;
+    background-color: @search-bg-color;
+    padding: 40px;
+    p {
+        .search-font()
+    }
+    input{
+        .search-font();
+        background-color: transparent;
+        border-bottom: 1px solid @wh-text-color;
+        width: 350px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;    
+    }
+}
+
+.main-container{
+    background-color: #f2e9d6;
+    padding: 20px;
+    margin: 0px 60px 60px 60px;
+    .main-content-title{
+        color: @bl-text-color;
+        font-size: 40px;
+        margin-bottom: 20px;
+        display: flex;
+        position: relative;
+        font-weight: lighter;
+        .hashtag{
+            .hashtag();
+        }
+    }
+    .main-content{
+        width: 33%;
+    }
+}
+
+.main-content-table{
+    padding: 20px;
+    .hero-table{
+        display: flex;
+        gap: 3px;
+        width: 100%;
+        justify-content: center;
+        overflow-x: auto;
+        .table-col{
+            .table-col();
+            .cell{
+                .cell-values();
+                .upper-left-dual{
+                    .upper-left-dual();
+                }
+            }
+        }   
+    }
+}
+
+.red-cell{
+    background-color: @red-cell;
+    color: @wh-text-color;
+}
+
+.green-cell{
+    background-color: @green-cell;
+    color: @wh-text-color;
+}
+
+.yellow-cell{
+    background-color: @yellow-cell;
+    color: @wh-text-color;
+}

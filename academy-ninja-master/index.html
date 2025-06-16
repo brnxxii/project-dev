@@ -1,0 +1,62 @@
+<html>
+<body>
+	<div id='background'>
+        <div id='character' style='position:absolute; top:100px; left:450px; background-image: url("img/down1.png"); width:59px; height:86px;'></div>
+    </div>
+    <script type="text/javascript">
+	    var leftValue = 450, 
+		topValue = 100
+
+    	function update(){
+    		document.getElementById("character").style.left = leftValue+"px";
+    		document.getElementById("character").style.top = topValue+"px";
+    	}
+
+    	document.onkeydown = function(e){
+    		console.log(e);
+    		if(e.keyCode == 37 && leftValue > 0) { //LEFT
+    			leftValue = leftValue - 10;
+				//change it to left1 and left 2 alternately
+				if (document.getElementById("character").style.backgroundImage == "url(\"img/left1.png\")"){
+					document.getElementById("character").style.backgroundImage = "url(\"img/left2.png\")";
+				}
+				else{
+					document.getElementById("character").style.backgroundImage = "url(\"img/left1.png\")";
+				}
+			}
+    		else if (e.keyCode == 39 && leftValue < 500) { // RIGHT
+    			leftValue = leftValue + 10;
+				//checks if bacground image is equal to right 1
+				if (document.getElementById("character").style.backgroundImage == "url(\"img/right1.png\")"){
+					//if yes, change it to right 2
+					document.getElementById("character").style.backgroundImage = "url(\"img/right2.png\")";
+				}
+				//if not, change it to right 1
+				else{
+					document.getElementById("character").style.backgroundImage = "url(\"img/right1.png\")";
+				}    		
+    		}
+    		else if (e.keyCode == 40 && topValue < 500) { // DOWN
+				topValue = topValue + 10;
+				if (document.getElementById("character").style.backgroundImage == "url(\"img/down1.png\")"){
+					document.getElementById("character").style.backgroundImage = "url(\"img/down2.png\")";
+				}
+				else{
+					document.getElementById("character").style.backgroundImage = "url(\"img/down1.png\")";
+				}    		
+			}
+			else if (e.keyCode == 38 && topValue > 10){
+				topValue = topValue - 10;
+				if (document.getElementById("character").style.backgroundImage == "url(\"img/top1.png\")"){
+					document.getElementById("character").style.backgroundImage = "url(\"img/top2.png\")";
+				}
+				else{
+					document.getElementById("character").style.backgroundImage = "url(\"img/top1.png\")";
+				}    		
+			}
+    		// ...
+    		update();
+    	}
+    </script>
+</body>
+</html>

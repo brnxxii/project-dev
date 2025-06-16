@@ -1,0 +1,122 @@
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	}
+
+/*header of calendar*/
+.title{
+    display: flex;
+    justify-content: center;
+    gap: 208px; 
+    margin-top: 30px;
+    gap: 16em;
+}
+.title p{
+    display: flex;
+    align-items: flex-end;
+    font-size: 30px;
+    font-weight: bold;
+}
+.title img{
+    width: 200px;
+    height: 100px;
+}
+
+/* content of calendar */
+.month{
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;                                            
+}
+.month .days, .week-one, .week-two, .week-three, .week-four, .week-five{
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 10px;
+}
+.month .days div {
+    border: 2px solid #000;
+    height: 50px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.month .week-one div{
+
+    height: 50px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.month .week-two div{
+    border: 2px solid #000;
+    height: 50px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.month .week-three div{
+    border: 2px solid #000;
+    height: 50px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.month .week-four div{
+    border: 2px solid #000;
+    height: 50px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.month .week-five div{
+    border: 2px solid #000;
+    height: 50px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.grey {
+    background-color: #f2f2f2;
+    border: 2px solid white
+}
+.border-first-week{
+    border: 2px solid #000;
+}
+.sunday{
+    background-color: rgb(98, 140, 232);
+}
+.saturday{
+    background-color: lightgreen;
+}
