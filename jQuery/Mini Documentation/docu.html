@@ -1,173 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet/less" type="text/less" href="docu.less">
+    <link rel="stylesheet/less" type="text/css" href="/jQuery/Mini Documentation/docu.less">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Document</title>
+    <script>
+        $(document).ready(function () {
+            $("#click-btn").click(function () {
+                console.log("Button clicked!");
+            })
+        })
+    </script>
 </head>
+
 <body>
     <section class="functions">
         <ul>
-            <li><a href="#">.click()</a></li>
-            <li><a href="#">.hide()</a></li>
-            <li><a href="#">.show()</a></li>
-            <li><a href="#">.toggle()</a></li>
-            <li><a href="#">.slideDown()</a></li>
-            <li><a href="#">.slideUp()</a></li>
-            <li><a href="#">.slideToggle()</a></li>
-            <li><a href="#">.fadeIn()</a></li>
-            <li><a href="#">.fadeOut()</a></li>
-            <li><a href="#">.addClass()</a></li>
-            <li><a href="#">.before()</a></li>
-            <li><a href="#">.after()</a></li>
-            <li><a href="#">.append()</a></li>
-            <li><a href="#">.html()</a></li>
-            <li><a href="#">.attr()</a></li>
-            <li><a href="#">.val()</a></li>
-            <li><a href="#">.text()</a></li>
+            <li><a href="#click-title">.click()</a></li>
+            <li><a href="#hide-title">.hide()</a></li>
+            <li><a href="#show-title">.show()</a></li>
+            <li><a href="#toggle-title">.toggle()</a></li>
+            <li><a href="#slideDown-title">.slideDown()</a></li>
+            <li><a href="#slideUp-title">.slideUp()</a></li>
+            <li><a href="#slideToggle-title">.slideToggle()</a></li>
+            <li><a href="#fadeIn-title">.fadeIn()</a></li>
+            <li><a href="#fadeOut-title">.fadeOut()</a></li>
+            <li><a href="#addClass-title">.addClass()</a></li>
+            <li><a href="#before-title">.before()</a></li>
+            <li><a href="#after-title">.after()</a></li>
+            <li><a href="#append-title">.append()</a></li>
+            <li><a href="#html-title">.html()</a></li>
+            <li><a href="#attr-title">.attr()</a></li>
+            <li><a href="#val-title">.val()</a></li>
+            <li><a href="#text-title">.text()</a></li>
         </ul>
     </section>
+
     <section class="description">
         <h1>My Mini Documentation</h1>
-
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="click-title">
                 <h2>Click</h2>
             </div>
             <div class="content">
-                <button>.click()</button>
-                <p>Description</p>
+                <button type="button" id="click-btn" class="btn btn-outline-success">.click()</button>
+                <p class="p-click">Bind an event handler to the "click" event, or trigger that event on an element.</p>
             </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="hide-title">
                 <h2>Hide</h2>
             </div>
             <div class="content">
-                <button>.hide()</button>
-                <p>Description</p>
+                <button type="button" id="hide-btn" class="btn btn-outline-success">.hide()</button>
+                <p>Hides selected elements.</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="show-title">
                 <h2>Show</h2>
             </div>
             <div class="content">
-                <button>.show()</button>
-                <p>Description</p>
+                <button type="button" id="show-btn" class="btn btn-outline-success">.show()</button>
+                <p>Shows selected elements.</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="toggle-title">
                 <h2>Toggle</h2>
             </div>
             <div class="content">
-                <button>.toggle()</button>
-                <p>Description</p>
+                <button type="button" id="toggle-btn" class="btn btn-outline-success">.toggle()</button>
+                <p>Toggles the visibility of selected elements.</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="slideDown-title">
                 <h2>Slide Down</h2>
             </div>
             <div class="content">
-                <button>.slideDown()</button>
-                <p>Description</p>
+                <button type="button" id="slideDown-btn" class="btn btn-outline-success">.slideDown()</button>
+                <p>Slides down the selected elements.</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="slideUp-title">
                 <h2>Slide Up</h2>
             </div>
             <div class="content">
-                <button>.slideUp()</button>
-                <p>Description</p>
+                <button type="button" id="slideUp-btn" class="btn btn-outline-success">.slideUp()</button>
+                <p>Slides up the selected elements.</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="slideToggle-title">
                 <h2>Slide Toggle</h2>
             </div>
             <div class="content">
-                <button>.slideToggle()</button>
-                <p>Description</p>
+                <button type="button" id="slideToggle-btn" class="btn btn-outline-success">.slideToggle()</button>
+                <p>Toggles the sliding motion of the selected elements.</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="fadeIn-title">
                 <h2>Fade In</h2>
             </div>
             <div class="content">
-                <button>.fadeIn()</button>
-                <p>Description</p>
+                <button type="button" id="fadeIn-btn" class="btn btn-outline-success">.fadeIn()</button>
+                <p>Fades in the selected elements.</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="fadeOut-title">
                 <h2>Fade Out</h2>
             </div>
             <div class="content">
-                <button>.fadeOut()</button>
-                <p>Description</p>
+                <button type="button" id="fadeOut-btn" class="btn btn-outline-success">.fadeOut()</button>
+                <p>Fades out the selected elements.</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="addClass-title">
                 <h2>Add Class</h2>
             </div>
             <div class="content">
-                <button>.addClass()</button>
+                <button type="button" id="addClass-btn" class="btn btn-outline-success">.addClass()</button>
                 <p>Description</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="before-title">
                 <h2>Before</h2>
             </div>
             <div class="content">
-                <button>.before()</button>
+                <button type="button" id="before-btn" class="btn btn-outline-success">.before()</button>
                 <p>Description</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="after-title">
                 <h2>After</h2>
             </div>
             <div class="content">
-                <button>.after()</button>
+                <button type="button" id="after-btn" class="btn btn-outline-success">.after()</button>
                 <p>Description</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="append-title">
                 <h2>Append</h2>
             </div>
             <div class="content">
-                <button>.append()</button>
+                <button type="button" id="append-btn" class="btn btn-outline-success">.append()</button>
                 <p>Description</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="html-title">
                 <h2>HTML</h2>
             </div>
             <div class="content">
-                <button>.html()</button>
+                <button type="button" id="html-btn" class="btn btn-outline-success">.html()</button>
                 <p>Description</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="attr-title">
                 <h2>Attr</h2>
             </div>
             <div class="content">
-                <button>.attr()</button>
+                <button type="button" id="attr-btn" class="btn btn-outline-success">.attr()</button>
                 <p>Description</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="val-title">
                 <h2>Value</h2>
             </div>
             <div class="content">
-                <button>.val()</button>
+                <button type="button" id="val-btn" class="btn btn-outline-success">.val()</button>
                 <p>Description</p>
+            </div>
         </div>
         <div class="function-desc">
-            <div class="title">
+            <div class="title" id="text-title">
                 <h2>Text</h2>
             </div>
             <div class="content">
-                <button>.text()</button>
+                <button type="button" id="text-btn" class="btn btn-outline-success">.text()</button>
                 <p>Description</p>
+            </div>
         </div>
     </section>
 </body>
+
 </html>
