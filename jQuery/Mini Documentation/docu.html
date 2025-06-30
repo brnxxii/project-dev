@@ -16,7 +16,7 @@
     <script>
         $(document).ready(function () {
             $("#click-btn").click(function () {
-                console.log("Button clicked!");
+                alert("Button clicked!");
             })
             $("#hide-btn").click(function(){
                 if ($(".p-hide").is(":visible")) {
@@ -29,6 +29,73 @@
             $("#show-btn").click(function(){
                 $(".p-show").show();
                 $(".p-hide").show();
+            })
+            $("#toggle-btn").click(function(){
+                $(".p-toggle").toggle("slow");
+            });
+            $("#slideDown-btn").click(function(){
+                if ($(".p-slideDown").is(":visible")) {
+                    $(".p-slideDown").hide();
+                } else {
+                    $(".p-slideDown").slideDown("slow");
+                }
+            });
+            $("#slideUp-btn").click(function(){
+                if ($(".p-slideUp").is(":visible")) {
+                    $(".p-slideUp").slideUp();
+                } else {
+                    $(".p-slideUp").show();
+                }
+            });
+            $("#slideToggle-btn").click(function(){
+                $(".p-slideToggle").slideToggle();
+                console.log("Slide Toggle Button Clicked");
+            })
+            $("#fadeIn-btn").click(function(){
+                if ($(".p-fadeIn").is(":visible")) {
+                    $(".p-fadeIn").hide();
+                } else {
+                    $(".p-fadeIn").fadeIn("slow");
+                }
+            })
+            $("#fadeOut-btn").click(function(){
+                if ($(".p-fadeOut").is(":visible")) {
+                    $(".p-fadeOut").fadeOut("slow");
+                    console.log("Fade Out Button Clicked");
+                } else {
+                    $(".p-fadeOut").show();
+                }
+            })
+            $("#addClass-btn").click(function(){
+                if ($(".p-addClass").hasClass("bold-highlight")) {
+                    $(".p-addClass").removeClass("bold-highlight");
+                    console.log("button clicked")
+                } else {
+                    $(".p-addClass").addClass("bold-highlight");
+                }
+            })
+            $("#before-btn").click(function(){
+                $(".p-before").before("This is a text!")
+            })
+            $("#after-btn").click(function(){
+                $(".p-after").after("This is a text!")
+            })
+            $("#append-btn").click(function(){
+                $(".p-append").append(" This is a sample text appended.")
+            })
+            $("#html-btn").click(function(){
+                $(".p-html").html("<strong>This is a new HTML content!</strong>");
+            })
+            $("#attr-btn").click(function(){
+                var attri = $(".p-attr").attr("class");
+                console.log("Attribute value: " + attri);
+            })
+            $("#val-btn").click(function(){
+                var value = $(".form-control").val("This is a new value!");
+                console.log("Input value set to: " + value);
+            })
+            $("#text-btn").click(function(){
+                $(".p-text").text("This is a new text content!");
             })
         });
 
@@ -96,7 +163,7 @@
             </div>
             <div class="content">
                 <button type="button" id="toggle-btn" class="btn btn-outline-success">.toggle()</button>
-                <p>Switches the visibility of elements; it hides visible elements and shows hidden ones with a single function.</p>
+                <p class="p-toggle">Switches the visibility of elements; it hides visible elements and shows hidden ones with a single function.</p>
             </div>
             <div class="separator"></div>
         </div>
@@ -106,7 +173,7 @@
             </div>
             <div class="content">
                 <button type="button" id="slideDown-btn" class="btn btn-outline-success">.slideDown()</button>
-                <p>Reveals an element with a smooth sliding animation from top to bottom. Often used for dropdowns or collapsible sections.</p>
+                <p class="p-slideDown">Reveals an element with a smooth sliding animation from top to bottom. Often used for dropdowns or collapsible sections.</p>
             </div>
             <div class="separator"></div>
         </div>
@@ -116,7 +183,7 @@
             </div>
             <div class="content">
                 <button type="button" id="slideUp-btn" class="btn btn-outline-success">.slideUp()</button>
-                <p> Hides an element with a sliding-up animation, gradually collapsing the element upwards until it disappears.</p>
+                <p class="p-slideUp"> Hides an element with a sliding-up animation, gradually collapsing the element upwards until it disappears.</p>
             </div>
             <div class="separator"></div>
         </div>
@@ -126,7 +193,7 @@
             </div>
             <div class="content">
                 <button type="button" id="slideToggle-btn" class="btn btn-outline-success">.slideToggle()</button>
-                <p>Combines slideDown() and slideUp(). It toggles the sliding animation based on whether the element is currently visible or hidden.</p>
+                <p class="p-slideToggle">Combines slideDown() and slideUp(). It toggles the sliding animation based on whether the element is currently visible or hidden.</p>
             </div>
             <div class="separator"></div>
         </div>
@@ -136,7 +203,7 @@
             </div>
             <div class="content">
                 <button type="button" id="fadeIn-btn" class="btn btn-outline-success">.fadeIn()</button>
-                <p>Gradually changes the opacity of an element from hidden to visible, creating a smooth fade-in effect.</p>
+                <p class="p-fadeIn">Gradually changes the opacity of an element from hidden to visible, creating a smooth fade-in effect.</p>
             </div>
             <div class="separator"></div>
         </div>
@@ -146,7 +213,7 @@
             </div>
             <div class="content">
                 <button type="button" id="fadeOut-btn" class="btn btn-outline-success">.fadeOut()</button>
-                <p>Gradually changes the opacity from visible to hidden, making the element fade out smoothly.</p>
+                <p class="p-fadeOut">Gradually changes the opacity from visible to hidden, making the element fade out smoothly.</p>
             </div>
             <div class="separator"></div>
         </div>
@@ -156,7 +223,7 @@
             </div>
             <div class="content">
                 <button type="button" id="addClass-btn" class="btn btn-outline-success">.addClass()</button>
-                <p>Adds one or more CSS classes to the selected elements. Useful for dynamically applying styles or triggering CSS-based animations.</p>
+                <p class="p-addClass">Adds one or more CSS classes to the selected elements. Useful for dynamically applying styles or triggering CSS-based animations.</p>
             </div>
             <div class="separator"></div>
         </div>
@@ -166,7 +233,7 @@
             </div>
             <div class="content">
                 <button type="button" id="before-btn" class="btn btn-outline-success">.before()</button>
-                <p>Inserts HTML, text, or elements before the selected element in the DOM tree.</p>
+                <p class="p-before">Inserts HTML, text, or elements before the selected element in the DOM tree.</p>
             </div>
             <div class="separator"></div>
         </div>
@@ -176,7 +243,7 @@
             </div>
             <div class="content">
                 <button type="button" id="after-btn" class="btn btn-outline-success">.after()</button>
-                <p>Inserts HTML, text, or elements after the selected element in the DOM tree.</p>
+                <p class="p-after">Inserts HTML, text, or elements after the selected element in the DOM tree.</p>
             </div>
             <div class="separator"></div>
         </div>
@@ -186,7 +253,7 @@
             </div>
             <div class="content">
                 <button type="button" id="append-btn" class="btn btn-outline-success">.append()</button>
-                <p> Inserts content inside the selected element as its last child. Commonly used to dynamically add elements or content.</p>
+                <p class="p-append"> Inserts content inside the selected element as its last child. Commonly used to dynamically add elements or content.</p>
             </div>
             <div class="separator"></div>
         </div>
@@ -196,7 +263,7 @@
             </div>
             <div class="content">
                 <button type="button" id="html-btn" class="btn btn-outline-success">.html()</button>
-                <p>Gets the inner HTML content of the first selected element or sets new HTML content for all matched elements.</p>
+                <p class="p-html">Gets the inner HTML content of the first selected element or sets new HTML content for all matched elements.</p>
             </div>
             <div class="separator"></div>
         </div>
@@ -206,7 +273,7 @@
             </div>
             <div class="content">
                 <button type="button" id="attr-btn" class="btn btn-outline-success">.attr()</button>
-                <p>Gets the value of an attribute from the first matched element, or sets one or more attributes for all selected elements.</p>
+                <p class="p-attr">Gets the value of an attribute from the first matched element, or sets one or more attributes for all selected elements.</p>
             </div>
             <div class="separator"></div>
         </div>
@@ -216,7 +283,8 @@
             </div>
             <div class="content">
                 <button type="button" id="val-btn" class="btn btn-outline-success">.val()</button>
-                <p>Gets the current value of form elements (like input fields, selects, and textareas) or sets a new value.</p>
+                <p class="p-value">Gets the current value of form elements (like input fields, selects, and textareas) or sets a new value.</p>
+                <input type="text" class="form-control" placeholder="Type something here...">
             </div>
             <div class="separator"></div>
         </div>
@@ -226,7 +294,7 @@
             </div>
             <div class="content">
                 <button type="button" id="text-btn" class="btn btn-outline-success">.text()</button>
-                <p>Gets the combined text content of the selected elements or sets new text content, ignoring any HTML tags.</p>
+                <p class="p-text">Gets the combined text content of the selected elements or sets new text content, ignoring any HTML tags.</p>
             </div>
             <div class="separator"></div>
         </div>
