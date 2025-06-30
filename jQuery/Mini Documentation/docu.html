@@ -18,7 +18,20 @@
             $("#click-btn").click(function () {
                 console.log("Button clicked!");
             })
-        })
+            $("#hide-btn").click(function(){
+                if ($(".p-hide").is(":visible")) {
+                    $(".p-hide").hide();
+                    $(".p-show").hide();
+                } else {
+                    $(".p-hide").show();
+                }
+            })
+            $("#show-btn").click(function(){
+                $(".p-show").show();
+                $(".p-hide").show();
+            })
+        });
+
     </script>
 </head>
 
@@ -53,8 +66,9 @@
             </div>
             <div class="content">
                 <button type="button" id="click-btn" class="btn btn-outline-success">.click()</button>
-                <p class="p-click">Bind an event handler to the "click" event, or trigger that event on an element.</p>
+                <p class="p-click"> Attaches an event handler that runs a function whenever the selected element is clicked. Commonly used to trigger actions like showing, hiding, or modifying elements.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="hide-title">
@@ -62,8 +76,9 @@
             </div>
             <div class="content">
                 <button type="button" id="hide-btn" class="btn btn-outline-success">.hide()</button>
-                <p>Hides selected elements.</p>
+                <p class="p-hide">Hides the selected elements by setting their CSS display property to none. The element stays in the DOM but becomes invisible.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="show-title">
@@ -71,8 +86,9 @@
             </div>
             <div class="content">
                 <button type="button" id="show-btn" class="btn btn-outline-success">.show()</button>
-                <p>Shows selected elements.</p>
+                <p class="p-show"> Displays hidden elements by removing the display: none property or applying the default display for that element.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="toggle-title">
@@ -80,8 +96,9 @@
             </div>
             <div class="content">
                 <button type="button" id="toggle-btn" class="btn btn-outline-success">.toggle()</button>
-                <p>Toggles the visibility of selected elements.</p>
+                <p>Switches the visibility of elements; it hides visible elements and shows hidden ones with a single function.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="slideDown-title">
@@ -89,8 +106,9 @@
             </div>
             <div class="content">
                 <button type="button" id="slideDown-btn" class="btn btn-outline-success">.slideDown()</button>
-                <p>Slides down the selected elements.</p>
+                <p>Reveals an element with a smooth sliding animation from top to bottom. Often used for dropdowns or collapsible sections.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="slideUp-title">
@@ -98,8 +116,9 @@
             </div>
             <div class="content">
                 <button type="button" id="slideUp-btn" class="btn btn-outline-success">.slideUp()</button>
-                <p>Slides up the selected elements.</p>
+                <p> Hides an element with a sliding-up animation, gradually collapsing the element upwards until it disappears.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="slideToggle-title">
@@ -107,8 +126,9 @@
             </div>
             <div class="content">
                 <button type="button" id="slideToggle-btn" class="btn btn-outline-success">.slideToggle()</button>
-                <p>Toggles the sliding motion of the selected elements.</p>
+                <p>Combines slideDown() and slideUp(). It toggles the sliding animation based on whether the element is currently visible or hidden.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="fadeIn-title">
@@ -116,8 +136,9 @@
             </div>
             <div class="content">
                 <button type="button" id="fadeIn-btn" class="btn btn-outline-success">.fadeIn()</button>
-                <p>Fades in the selected elements.</p>
+                <p>Gradually changes the opacity of an element from hidden to visible, creating a smooth fade-in effect.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="fadeOut-title">
@@ -125,8 +146,9 @@
             </div>
             <div class="content">
                 <button type="button" id="fadeOut-btn" class="btn btn-outline-success">.fadeOut()</button>
-                <p>Fades out the selected elements.</p>
+                <p>Gradually changes the opacity from visible to hidden, making the element fade out smoothly.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="addClass-title">
@@ -134,8 +156,9 @@
             </div>
             <div class="content">
                 <button type="button" id="addClass-btn" class="btn btn-outline-success">.addClass()</button>
-                <p>Description</p>
+                <p>Adds one or more CSS classes to the selected elements. Useful for dynamically applying styles or triggering CSS-based animations.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="before-title">
@@ -143,8 +166,9 @@
             </div>
             <div class="content">
                 <button type="button" id="before-btn" class="btn btn-outline-success">.before()</button>
-                <p>Description</p>
+                <p>Inserts HTML, text, or elements before the selected element in the DOM tree.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="after-title">
@@ -152,8 +176,9 @@
             </div>
             <div class="content">
                 <button type="button" id="after-btn" class="btn btn-outline-success">.after()</button>
-                <p>Description</p>
+                <p>Inserts HTML, text, or elements after the selected element in the DOM tree.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="append-title">
@@ -161,8 +186,9 @@
             </div>
             <div class="content">
                 <button type="button" id="append-btn" class="btn btn-outline-success">.append()</button>
-                <p>Description</p>
+                <p> Inserts content inside the selected element as its last child. Commonly used to dynamically add elements or content.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="html-title">
@@ -170,8 +196,9 @@
             </div>
             <div class="content">
                 <button type="button" id="html-btn" class="btn btn-outline-success">.html()</button>
-                <p>Description</p>
+                <p>Gets the inner HTML content of the first selected element or sets new HTML content for all matched elements.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="attr-title">
@@ -179,8 +206,9 @@
             </div>
             <div class="content">
                 <button type="button" id="attr-btn" class="btn btn-outline-success">.attr()</button>
-                <p>Description</p>
+                <p>Gets the value of an attribute from the first matched element, or sets one or more attributes for all selected elements.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="val-title">
@@ -188,8 +216,9 @@
             </div>
             <div class="content">
                 <button type="button" id="val-btn" class="btn btn-outline-success">.val()</button>
-                <p>Description</p>
+                <p>Gets the current value of form elements (like input fields, selects, and textareas) or sets a new value.</p>
             </div>
+            <div class="separator"></div>
         </div>
         <div class="function-desc">
             <div class="title" id="text-title">
@@ -197,8 +226,9 @@
             </div>
             <div class="content">
                 <button type="button" id="text-btn" class="btn btn-outline-success">.text()</button>
-                <p>Description</p>
+                <p>Gets the combined text content of the selected elements or sets new text content, ignoring any HTML tags.</p>
             </div>
+            <div class="separator"></div>
         </div>
     </section>
 </body>
