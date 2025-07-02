@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            /* $('#rat1').hover(function () {
+                $('#rat1').toggle();
+            });
+            $('#rat2').hover(function () {
+                $('#rat2').toggle();
+            });
+            $('#rat3').hover(function () {
+                $('#rat3').toggle();
+            });
+            $('#rat4').hover(function () {
+                $('#rat4').toggle();
+            }); */
+            $("img").hover(function(){
+                $(this).toggle();
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Catch the rats as many as you can!</h1>
+    <img id="rat1" src="rat1.jpg" alt="this is rat 1" />
+    <img id="rat2" src="rat2.jpg" alt="this is rat 2" />
+    <img id="rat3" src="rat3.jpg" alt="this is rat 3" />
+    <img id="rat4" src="rat4.jpg" alt="this is rat 4" />
+</body>
+
+</html>

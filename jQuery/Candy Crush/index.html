@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Crush jQuery Project</title>
+    <link rel="stylesheet/less" type="text/css" href="/jQuery/Candy Crush/style.less">
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            var candies = $("img");
+            $("img").click(function(){
+                $(this).toggle("slow");
+            })
+            $('#reset').click(function(){
+                candies.show("slow");
+            })
+        })
+    </script>
+    <div class="cc-game">
+        <div class="container">
+            <img src="/jQuery/Candy Crush/resources/orange_candy.png" alt="orange" class="candy orange" id="candy1">
+            <img src="/jQuery/Candy Crush/resources/red_candy.png" alt="red" class="candy red" id="candy2">
+            <img src="/jQuery/Candy Crush/resources/yellow_candy.png" alt="yellow" class="candy yellow" id="candy3">
+            <img src="/jQuery/Candy Crush/resources/red_candy.png" alt="red" class="candy red" id="candy4">
+            <img src="/jQuery/Candy Crush/resources/yellow_candy.png" alt="yellow" class="candy yellow" id="candy5">
+            <img src="/jQuery/Candy Crush/resources/orange_candy.png" alt="orange" class="candy orange" id="candy6">
+            <img src="/jQuery/Candy Crush/resources/orange_candy.png" alt="orange" class="candy orange" id="candy7">
+            <img src="/jQuery/Candy Crush/resources/red_candy.png" alt="red" class="candy red" id="candy8">
+            <img src="/jQuery/Candy Crush/resources/yellow_candy.png" alt="yellow" class="candy yellow" id="candy9">
+            <img src="/jQuery/Candy Crush/resources/multicolor_candy.png" alt="multicolor" class="candy multi" id="candy10">
+            <img src="/jQuery/Candy Crush/resources/red_candy.png" alt="red" class="candy red" id="candy11">
+            <img src="/jQuery/Candy Crush/resources/orange_candy.png" alt="orange" class="candy orange" id="candy12">
+            <img src="/jQuery/Candy Crush/resources/yellow_candy.png" alt="yellow" class="candy yellow" id="candy13">
+            <img src="/jQuery/Candy Crush/resources/red_candy.png" alt="red" class="candy red" id="candy14">
+            <img src="/jQuery/Candy Crush/resources/red_candy.png" alt="red" class="candy red" id="candy15">
+            <img src="/jQuery/Candy Crush/resources/orange_candy.png" alt="orange" class="candy orange" id="candy16">
+        </div>
+        <button class="reset-btn" id="reset">Reset Game</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-style: inherit;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-image: url("/jQuery/Candy Crush/resources/background.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.cc-game {
+	margin: 150px 250px 250px 750px;
+	gap: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	.container {
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 5px;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 10px;
+		justify-content: center;
+		gap: 10px;
+		height: 320px;
+		width: 350px;
+
+		img {
+			width: 50px;
+			height: 50px;
+			padding: 10px;
+			background-color: rgba(255, 255, 255, 0.3);
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	}
+
+	.reset-btn {
+		width: 100px;
+		height: 25px;
+		cursor: pointer;
+		background-color: #f3c82d;
+		border-radius: 5px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	}
+}
