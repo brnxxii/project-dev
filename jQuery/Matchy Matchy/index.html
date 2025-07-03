@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" type="text/css" href="style.less">
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Matchy Matchy jQuery Project</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+        //     $(".container #card").hover(function(){
+        //         let alt = $(this).attr("data-alt-src");
+        //         let current = $(this).attr("src");
+                
+        //         console.log("Card clicked src is", alt);
+
+        //         $(this).attr("src", alt);
+        //         $(this).attr("data-alt-src", current);
+        // })
+        $(".container #card").hover(
+            function(){
+                var alt = $(this).attr("data-alt-src");
+                var current = $(this).attr("src");
+
+                $(this).attr("src", alt)
+                $(this).attr("data-alt-src", current)
+            },
+            function(){
+                var alt = $(this).attr("data-alt-src");
+                var current = $(this).attr("src");
+                
+                $(this).attr("src", alt)
+                $(this).attr("data-alt-src", current)
+            })
+    });
+    </script>
+    <div class="container">
+        <img src="/jQuery/Matchy Matchy/resources/question.jpg" alt="question" class="card" id="card" data-alt-src="/jQuery/Matchy Matchy/resources/chow.jpg">
+        <img src="/jQuery/Matchy Matchy/resources/question.jpg" alt="question" class="card" id="card" data-alt-src="/jQuery/Matchy Matchy/resources/shihtzu.webp">
+        <img src="/jQuery/Matchy Matchy/resources/question.jpg" alt="question" class="card" id="card" data-alt-src="/jQuery/Matchy Matchy/resources/corgi.jpeg">
+        <img src="/jQuery/Matchy Matchy/resources/question.jpg" alt="question" class="card" id="card" data-alt-src="/jQuery/Matchy Matchy/resources/dachshund.jpg">
+        <img src="/jQuery/Matchy Matchy/resources/question.jpg" alt="question" class="card" id="card" data-alt-src="/jQuery/Matchy Matchy/resources/samoyed.webp">
+        <img src="/jQuery/Matchy Matchy/resources/question.jpg" alt="question" class="card" id="card" data-alt-src="/jQuery/Matchy Matchy/resources/golden.jpg">
+        <img src="/jQuery/Matchy Matchy/resources/question.jpg" alt="question" class="card" id="card" data-alt-src="/jQuery/Matchy Matchy/resources/chow.jpg">
+        <img src="/jQuery/Matchy Matchy/resources/question.jpg" alt="question" class="card" id="card" data-alt-src="/jQuery/Matchy Matchy/resources/shihtzu.webp">
+        <img src="/jQuery/Matchy Matchy/resources/question.jpg" alt="question" class="card" id="card" data-alt-src="/jQuery/Matchy Matchy/resources/corgi.jpeg">
+        <img src="/jQuery/Matchy Matchy/resources/question.jpg" alt="question" class="card" id="card" data-alt-src="/jQuery/Matchy Matchy/resources/dachshund.jpg">
+        <img src="/jQuery/Matchy Matchy/resources/question.jpg" alt="question" class="card" id="card" data-alt-src="/jQuery/Matchy Matchy/resources/golden.jpg">
+        <img src="/jQuery/Matchy Matchy/resources/question.jpg" alt="question" class="card" id="card" data-alt-src="/jQuery/Matchy Matchy/resources/samoyed.webp">
+    </div>
+</body>
+</html>
