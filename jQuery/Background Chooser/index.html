@@ -30,10 +30,11 @@
             //     var bg4 = $("#main_box #bg-4").attr("src");
             //     $("#main_box").css("background-image", `url(${bg4})`);
             // })
-            $(".mini_boxes").hover(function(event){
+            $(".mini_boxes").click(function(event){
                 event.stopPropagation();
+                alert("you clicked the box")
                 var imgSrc = $(this).attr("src");
-                $("#main_box").css("background", `url(${imgSrc})`);
+                $("#main_box").css("background-image", `url(${imgSrc})`);
             })
         });
     </script>
@@ -51,7 +52,7 @@
             height: 100px;
             margin: 10px 0 15px 10px;
         }
-
+        
         h1 {
             text-align: center;
             margin: 30px;
