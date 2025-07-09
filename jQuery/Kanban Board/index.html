@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <style>
+        #sortable1,
+        #sortable2,
+        #sortable3,
+        #sortable4,
+        #sortable5 {
+            border: 1px solid #eee;
+            width: 142px;
+            min-height: 20px;
+            list-style-type: none;
+            margin: 0;
+            padding: 5px 0 0 0;
+            float: left;
+            margin-right: 10px;
+        }
+
+        #sortable1 li,
+        #sortable2 li,
+        #sortable3 li,
+        #sortable4 li,
+        #sortable5 li {
+            margin: 0 5px 5px 5px;
+            padding: 5px;
+            font-size: 1.2em;
+            width: 120px;
+        }
+        body{
+            height: 100vh;
+        }
+        .kanban-board {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+            height: 100vh;
+        }
+
+        .kanban-board h1 {
+            font-size: 50px;
+            color: #333
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            overflow-y: auto;
+            
+        }
+
+        .category-1,
+        .category-2,
+        .category-3,
+        .category-4,
+        .category-5 {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            
+        }
+
+        .category-1 h2,
+        .category-2 h2,
+        .category-3 h2,
+        .category-4 h2, 
+        .category-5 h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .new-task-button {
+            background-color: bisque;
+        }
+
+        button{
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                $("#sortable1, #sortable2, #sortable3, #sortable4, #sortable5").sortable({
+                    connectWith: ".connectedSortable"
+                }).disableSelection();
+            });
+            $("button").click(function () {
+                var newItem = $("<li class='ui-state-default new-task-button'>New Task</li>");
+                $(this).siblings(".list").append(newItem);
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div id="kanban-board" class="kanban-board">
+        <h1>Kanban Board</h1>
+        <div class="categories">
+            <div class="category-1">
+                <h2>To Do</h2>
+                <ul id="sortable1" class="connectedSortable list">
+                    <li class="ui-state-default">Item 1</li>
+                    <li class="ui-state-default">Item 2</li>
+                    <li class="ui-state-default">Item 3</li>
+                    <li class="ui-state-default">Item 4</li>
+                    <li class="ui-state-default">Item 5</li>
+                </ul>
+                <div></div>
+                <button id="new-task-sort-1">New Task</button>
+            </div>
+            <div class="category-2">
+                <h2>Doing</h2>
+                <ul id="sortable2" class="connectedSortable list">
+                    <li class="ui-state-default">Item 1</li>
+                    <li class="ui-state-default">Item 2</li>
+                    <li class="ui-state-default">Item 3</li>
+                    <li class="ui-state-default">Item 4</li>
+                    <li class="ui-state-default">Item 5</li>
+                </ul>
+                <button id="new-task-sort-2">New Task</button>
+            </div>
+            <div class="category-3">
+                <h2>For Testing</h2>
+                <ul id="sortable3" class="connectedSortable list">
+                    <li class="ui-state-default">Item 1</li>
+                    <li class="ui-state-default">Item 2</li>
+                    <li class="ui-state-default">Item 3</li>
+                    <li class="ui-state-default">Item 4</li>
+                    <li class="ui-state-default">Item 5</li>
+                </ul>
+                <button id="new-task-sort-3">New Task</button>
+            </div>
+            <div class="category-4">
+                <h2>For Approval</h2>
+                <ul id="sortable4" class="connectedSortable list">
+                    <li class="ui-state-default">Item 1</li>
+                    <li class="ui-state-default">Item 2</li>
+                    <li class="ui-state-default">Item 3</li>
+                    <li class="ui-state-default">Item 4</li>
+                    <li class="ui-state-default">Item 5</li>
+                </ul>
+                <button id="new-task-sort-4">New Task</button>
+            </div>
+            <div class="category-5">
+                <h2>Done</h2>
+                <ul id="sortable5" class="connectedSortable list">
+                    <li class="ui-state-default">Item 1</li>
+                    <li class="ui-state-default">Item 2</li>
+                    <li class="ui-state-default">Item 3</li>
+                    <li class="ui-state-default">Item 4</li>
+                    <li class="ui-state-default">Item 5</li>
+                </ul>
+                <button id="new-task-sort-5">New Task</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
