@@ -1,56 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Form Validation</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/themes/smoothness/jquery-ui.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script>
-            $(document).ready(function () {
-                $( "#datepicker" ).datepicker();
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet/less" type="text/css" href="style.less">
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script>
+        $(document).ready(function () {
+            $("#datepicker").datepicker();
+            $('form').submit(function () {
+                var firstName = $('#first-name').val();
+                var lastName = $('#last-name').val();
+                var vaccDate = $('#datepicker').val();
+                var symptoms = $('input[name="symptoms"]:checked').length;
+                var covidDiagnosis = $('input[name="covid-diagnosis"]:checked').val();
+                var recentVaccine = $('input[name="recent-vaccine"]:checked').val();
+                
+                if (covidDiagnosis === undefined || recentVaccine === undefined) {
+                    alert('Please answer all medical history questions.');
+                    return false;
+                }
+                if (firstName === '' || lastName === '' || vaccDate === '' || symptoms === 0) {
+                    alert('Please fill out all required fields.');
+                    return false;
+                }
+                else {
+                    alert('Thank you, ' + firstName + ' ' + lastName + ' your registration date is ' + vaccDate + '.');
+                    return false;
+                }
             })
-        </script>
-    </head>
-    <body>
-        <div class="main-container">
-            <img src="/Form Validation/resources/logo.png" alt="logo" class="logo">
-            <h2>COVID-19 Vaccine Registration Form</h2>
-            <div class="full-name">
-                <p>Full Name</p>
-                <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
-                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
-            </div>
-            <div class="date-of-birth">
-                <p>Date of Birth</p>
-                <input type="text" id="datepicker">
-            </div>
-            <h3>Medical History</h3>
-            <div class="covid-diagnosis">
-                <p>Have you been diagnosed with Covid-19?</p>
-                <label><input type="radio" id="Yes" name="covid-diagnosis" value="Yes">Yes</label>
-                <label><input type="radio" id="No" name="covid-diagnosis" value="No">No</label>
-                <p>Have you received any vaccines in the last 14 days?</p>
-                <label><input type="radio" id="Yes" name="recent-vaccine" value="Yes">Yes</label>
-                <label><input type="radio" id="No" name="recent-vaccine" value="No">No</label>
-            </div>
-            <div class="covid-symptoms">
-                <p>Please check all symptoms that apply:</p>
-                <input type="Checkbox" id="loss-of-taste-smell" name="symptoms" value="loss-of-taste-smell">
-                <label for="loss-of-taste-smell">Loss of taste/smell</label>
-                <input type="Checkbox" id="fever" name="symptoms" value="fever">
-                <label for="fever">Fever</label>
-                <input type="Checkbox" id="cough" name="symptoms" value="cough">
-                <label for="cough">Cough</label>
-                <input type="Checkbox" id="shortness-of-breath" name="symptoms" value="shortness-of-breath">
-                <label for="shortness-of-breath">Shortness of breath</label>
-                <input type="Checkbox" id="sore-throat" name="symptoms" value="sore-throat">
-                <label for="sore-throat">Sore throat</label>
-                <input type="Checkbox" id="none" name="symptoms" value="none">
-                <label for="none">None of the above</label>
-            </div>
-            <button id="submit-button">Submit</button>
-    </body>
+        })
+    </script>
+</head>
+
+<body>
+    <form class="main-container" id="registration-form" action="#" method="POST">
+        <img src="resources/logo.png" alt="logo" class="logo">
+        <p class="form-title">COVID-19 Vaccine Registration Form</p>
+        <div class="full-name">
+            <p>Full Name:</p>
+            <input type="text" id="first-name" name="first-name" placeholder="First Name">
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+        </div>
+        <div class="vaccination-schedule">
+            <p>Vaccination Schedule</p>
+            <input type="text" id="datepicker" required>
+        </div>
+        <div class="covid-diagnosis">
+            <p class="diagnosis-title">Medical History</p>
+            <p>Have you been diagnosed with Covid-19?</p>
+            <label><input type="radio" id="Yes" name="covid-diagnosis" value="Yes">Yes</label>
+            <label><input type="radio" id="No" name="covid-diagnosis" value="No">No</label>
+            <p>Have you received any vaccines in the last 14 days?</p>
+            <label><input type="radio" id="Yes" name="recent-vaccine" value="Yes">Yes</label>
+            <label><input type="radio" id="No" name="recent-vaccine" value="No">No</label>
+        </div>
+        <div class="covid-symptoms">
+            <p required>Please check all symptoms that apply:</p>
+            <input type="Checkbox" id="loss-of-taste-smell" name="symptoms" value="loss-of-taste-smell">
+            <label for="loss-of-taste-smell">Loss of taste/smell</label>
+            <input type="Checkbox" id="fever" name="symptoms" value="fever">
+            <label for="fever">Fever</label>
+            <input type="Checkbox" id="cough" name="symptoms" value="cough">
+            <label for="cough">Cough</label>
+            <input type="Checkbox" id="shortness-of-breath" name="symptoms" value="shortness-of-breath">
+            <label for="shortness-of-breath">Shortness of breath</label>
+            <input type="Checkbox" id="sore-throat" name="symptoms" value="sore-throat">
+            <label for="sore-throat">Sore throat</label>
+            <input type="Checkbox" id="none" name="symptoms" value="none">
+            <label for="none">None of the above</label>
+        </div>
+        <div class="divider"></div>
+        <input id="submit-button" type="submit" value="Register Now!">
+    </form>
+
 </html>
