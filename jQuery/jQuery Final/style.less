@@ -1,0 +1,107 @@
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-style: inherit;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+/*Mixins*/
+
+/* Variables */
+@primary-color: #213448;
+@secondary-color: #547792;
+@tertiary-color: #94B4C1;
+@font-color: #ECEFCA;
+
+body {
+    background-color: @primary-color;   
+}
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .header-nav{
+        height: 60px;
+        ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            color: @tertiary-color;
+            margin: 20px auto;
+        }
+        li:hover{
+            color: @font-color;
+            cursor: pointer;
+            padding-bottom: 10px;
+            border-bottom: 1px solid @font-color;
+        }
+    }
+}
+
+.terminal-line{
+    margin-top: 30px;
+    font-family: 'Fira Code', monospace;
+    color: @tertiary-color;
+    background-color: #1e1e2f;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px @secondary-color;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    .terminal-prompt{
+        margin-right: 8px;
+        font-size: 2.5rem;
+    }
+    .typed-cursor{
+        color: @secondary-color;
+        font-size: 2.5rem;
+        font-weight: 600;
+        animation: blink 0.7s infinite;
+    }
+    #typed{
+    color: @secondary-color;
+    font-size: 2.5rem;
+    font-weight: 350;
+    }
+}
+
+.slick-container {
+    width: 80%;
+    margin-top: 30px;
+    text-align: center;
+    h2{
+        color: @tertiary-color;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        font-weight: lighter;
+        background-color: rgba(red, green, blue, alpha);
+    }
+    .tech-stacks {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 40px;
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.slick-slide img{
+    width: 100px;
+    height: auto;
+}
+
+.tech-stacks .slick-dots li button:before {
+    margin-top: 10px;
+    font-size:10px;
+    color:white;
+}

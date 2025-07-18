@@ -1,0 +1,10 @@
+.my-slider img {
+  height: auto;
+  border-radius: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.slick-dots li button:before {
+  color: red;
+}
